@@ -1,0 +1,12 @@
+Source: ros-lyrical-rcl-logging-syslog
+Section: misc
+Priority: optional
+Maintainer: Tomoya Fujita <tomoya.fujita825@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake-ros, ros-lyrical-ament-lint-auto <!nocheck>, ros-lyrical-ament-lint-common <!nocheck>, ros-lyrical-performance-test-fixture <!nocheck>, ros-lyrical-rcl-logging-interface, ros-lyrical-rcpputils, ros-lyrical-rcutils, ros-lyrical-ros-workspace
+Homepage: https://index.ros.org/p/rcl_logging_syslog/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-rcl-logging-syslog
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-rcl-logging-interface, ros-lyrical-rcpputils, ros-lyrical-rcutils, rsyslog, ros-lyrical-ros-workspace
+Description: Implementation of rcl_logging API for an syslog/rsyslog backend.
