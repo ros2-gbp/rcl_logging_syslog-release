@@ -12,14 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        branch: [rolling, kilted, jazzy, humble]
+        branch: [rolling, lyrical, kilted, jazzy, humble]
     container:
       image: tomoyafujita/ros2dev:${{ matrix.branch }}
       env:
         ROS_DISTRO: ${{ matrix.branch }}
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
         with:
           ref: ${{ matrix.branch }}
       - name: Build and Test
