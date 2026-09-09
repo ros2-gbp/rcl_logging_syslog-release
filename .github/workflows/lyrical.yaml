@@ -1,12 +1,12 @@
-# This is workflow for jazzy distribution
-name: jazzy
+# This is workflow for lyrical distribution
+name: lyrical
 
 # Because of rcl_logging interface, rcl_logging_syslog has each distribution branch.
 on:
   push:
-    branches: [ "jazzy" ]
+    branches: [ "lyrical" ]
   pull_request:
-    branches: [ "jazzy" ]
+    branches: [ "lyrical" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -21,13 +21,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: tomoyafujita/ros2dev:jazzy
+      image: tomoyafujita/ros2dev:lyrical
       env:
-        ROS_DISTRO: jazzy
+        ROS_DISTRO: lyrical
     steps:
       - name: Check out repository code
         uses: actions/checkout@v7
-      - name: Build and Test with ROS jazzy
+      - name: Build and Test with ROS lyrical
         shell: bash
         run: |
           ./scripts/github_workflows.sh
